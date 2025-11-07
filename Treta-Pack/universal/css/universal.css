@@ -1,0 +1,58 @@
+:root {
+  /* 🎨 Paleta de colores */
+  --color-principal: #F2F2F2;   /* Gris claro, fondo*/
+  --color-menta: #A8D5BA;  /* verde menta suave,formularios, bordes suaves */
+  --color-Beige: #D9CBA3; /* beige, tarjetas y banners */
+  --color-botones: #35C04C;     /* verde ecologico, bottones, iconos */
+  --color-navbar: #075187;      /* Azul confianza , encabezados,links*/
+  --color-texto : #2C2C2C; /* texto*/
+
+    /* Colores adicionales para productos */
+    --color-eco: #27AE60;
+    --color-innovation: #2980B9;
+    --color-warning: #E67E22;
+    --color-light: #FFFFFF;
+    --color-border: #E8E8E8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-principal);
+}
+/*Titulos*/
+@font-face {
+    font-family: "roboto" ;
+    src: url(/Treta-Pack/universal/Font/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "roboto" ;
+    src: url(/Treta-Pack/universal/Font/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "roboto" ;
+    src: url(/Treta-Pack/universal/Font/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+    font-weight: 600;
+}
+/*Contenido*/
+@font-face {
+    font-family: "coolvetica" ;
+    src: url(/Treta-Pack/universal/Font/Coolvetica/Coolvetica\ Rg\ Cond.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "coolvetica" ;
+    src: url(/Treta-Pack/universal/Font/Coolvetica/Coolvetica\ Rg\ Cond.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "coolvetica" ;
+    src: url(/Treta-Pack/universal/Font/Coolvetica/Coolvetica\ Rg\ Cond.otf);
+    font-weight: 800;
+}

@@ -1,0 +1,125 @@
+/* Fuente y fondo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3e3f00, #007b8a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Logo de fondo */
+.background-logo {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%); /*orientacion centrada*/
+    opacity: 0.40; /* transparencia sutil */
+    z-index: 50;
+}
+
+.background-logo img {
+    width: 400px;
+    height: 200px;
+    filter: blur(1px); /* efecto de desenfoque leve */
+}
+
+/* Contenedor del login */
+.login-container {
+    width: 30vw;
+    padding: 2vw;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Título */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Inputs */
+.id-input,
+.password-input {
+    justify-self: center;
+    width: 90%;
+    padding: 12px;
+    margin: 0.5vw;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.id-input::placeholder,
+.password-input::placeholder {
+    color: #222;
+}
+
+.id-input:focus,
+.password-input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Botones */
+.login-button,
+.register-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button {
+    background-color: blue;
+    color: #fff;
+}
+
+.register-button {
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+/* Hover */
+.login-button:hover {
+    background-color: #5f2eff;
+    transform: translateY(-2px);
+}
+
+.register-button:hover {
+    background-color: #00d9f5;
+    transform: translateY(-2px);
+}
+
+/* Enlace de recuperación */
+.forgot-link {
+    display: block;
+    margin-top: 15px;
+    color: #b8f4ff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-link:hover {
+    color: #fff;
+}

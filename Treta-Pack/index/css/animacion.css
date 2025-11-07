@@ -1,0 +1,184 @@
+/* /Treta-Pack/index/css/animacion.css */
+
+/* ===== ANIMACIONES PARA LAS IMÁGENES DE FEATURES ===== */
+.feature-box img {
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotate(-5deg);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.feature-box img.centered {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+}
+
+/* Efecto hover adicional para imágenes */
+.feature-box img.centered:hover {
+    transform: scale(1.05) rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+/* ===== ANIMACIONES PARA LAS CAJAS DE FEATURES ===== */
+.feature-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.feature-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Retrasos escalonados para las cajas */
+.feature-box:nth-child(1) { transition-delay: 0.1s; }
+.feature-box:nth-child(2) { transition-delay: 0.2s; }
+.feature-box:nth-child(3) { transition-delay: 0.3s; }
+
+/* ===== EFECTOS DE BRILLO Y SOMBRA ===== */
+@keyframes gentleGlow {
+    0% {
+        filter: drop-shadow(0 0 0 rgba(53, 192, 76, 0));
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(53, 192, 76, 0.3));
+    }
+    100% {
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    }
+}
+
+.feature-box img.centered {
+    animation: gentleGlow 2s ease-out;
+}
+
+/* ===== EFECTO DE BORDE ANIMADO ===== */
+.feature-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-botones), var(--color-navbar));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover::before {
+    transform: scaleX(1);
+}
+
+/* ===== ANIMACIÓN DE FONDO SUTIL ===== */
+.feature-box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(168, 213, 186, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+.feature-box:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(10%, 10%);
+}
+
+/* Asegurar que el contenido esté por encima del fondo animado */
+.feature-box > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== ANIMACIONES PARA EL HEADER ===== */
+.nav-bar {
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== ANIMACIÓN PARA EL FOOTER ===== */
+.footer {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ANIMACIÓN DE PULSO PARA BOTONES ===== */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(53, 192, 76, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(53, 192, 76, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(53, 192, 76, 0);
+    }
+}
+
+.feature-box a:hover {
+    animation: pulse 1.5s infinite;
+}
+
+/* ===== ANIMACIÓN DE REBOTE SUAVE ===== */
+@keyframes gentleBounce {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-8px); 
+    }
+}
+
+.feature-box:hover {
+    animation: gentleBounce 0.5s ease;
+}
+
+/* ===== MEDIA QUERIES PARA ANIMACIONES RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .feature-box {
+        transform: translateY(10px);
+    }
+    
+    .feature-box.visible {
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,113 @@
+/* Fondo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #3e3f00, #007b8a);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo de fondo */
+.background-logo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.60;
+  z-index: 0;
+}
+
+.background-logoimg {
+  width: 400px;
+  filter: blur(1px);
+}
+
+/* Contenedor del formulario */
+.contact-container {
+  width: 380px;
+  padding: 30px;
+  background-color:transparent;
+  border: 1px solid;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  opacity: 0.1;
+  transform: translateY(30px);
+}
+
+/* Animación de entrada */
+.contact-container.show {
+  opacity: 1;
+  transform: translateY(90);
+  transition: all 0.8s ease;
+}
+
+/* Título */
+.contact-container h2 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+/* Texto */
+.contact-container p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Inputs y textarea */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(68, 0, 255, 0.5);
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4400ff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #5f2eff;
+  transform: translateY(-2px);
+}
+
+/* Mensaje de respuesta */
+.respuesta {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00e0ff;
+}
+
+#info-container {
+    font-family: poppins, sans-serif;
+    background-color: yellowgreen;
+}

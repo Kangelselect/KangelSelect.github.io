@@ -1,0 +1,232 @@
+
+/* ===== ESTILOS BASE Y ESTRUCTURA PRINCIPAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "coolvetica", sans-serif;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+.nav-bar {
+    background-color: var(--color-navbar);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: contents;
+  align-items: center;
+  height: 100px;
+}
+
+.logoimg {
+  height: 100px;
+  width: 100px;
+  margin-right: 12px;
+  display: block;
+  object-fit: contain;
+  background-position: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logoimg {
+    height: 45px;
+}
+
+.logo h2 {
+    font-family: "roboto", sans-serif;
+    font-weight: 800;
+    color: var(--color-texto);
+    font-size: 1.8rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--color-botones);
+}
+
+/* ===== SECCIÓN FEATURES/SERVICIOS ===== */
+.features {
+    padding: 40px 20px;
+    background-color: var(--color-principal);
+}
+
+.features h2 {
+    font-family: "roboto", sans-serif;
+    font-weight: 800;
+    color: var(--color-navbar);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background-color: var(--color-Beige);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.feature-box h3 {
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    color: var(--color-navbar);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.feature-box img {
+    max-width: 100px;
+    height: auto;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.feature-box a {
+    display: inline-block;
+    margin: 15px 0;
+    color: var(--color-botones);
+    text-decoration: none;
+    font-family: "roboto", sans-serif;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 2px solid var(--color-botones);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.feature-box a:hover {
+    background-color: var(--color-botones);
+    color: var(--color-texto);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--color-navbar);
+  color:  var(--color-texto-);
+  text-align: center;
+  padding: 1rem;
+    background-color: var(--color-navbar);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+}
+
+.footer p {
+    font-family: "coolvetica", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-box {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .features h2 {
+        font-size: 2rem;
+    }
+    
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .features {
+        padding: 30px 15px;
+    }
+    
+    .features h2 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-bar {
+        padding: 12px 15px;
+    }
+    
+    .logo {
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .nav-menu {
+        gap: 0.5rem;
+    }
+    
+    .nav-menu a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
